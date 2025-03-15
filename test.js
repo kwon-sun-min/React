@@ -7,3 +7,5 @@ let num5 = 1 % 2;
 let num6 = (1 + 2) * 10;
 
 console.log(num6);
+
+//temp
