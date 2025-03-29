@@ -1,0 +1,319 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 13972,
+      "max": [
+        104.17530822753906,
+        187.46910095214844,
+        104.17530822753906
+      ],
+      "min": [
+        -104.17530822753906,
+        -99.21240234375,
+        -104.17530822753906
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 167664,
+      "componentType": 5126,
+      "count": 13972,
+      "max": [
+        0.9957122802734375,
+        1.0,
+        0.9990901350975037
+      ],
+      "min": [
+        -0.9952613711357117,
+        -1.0,
+        -0.9990894794464111
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 13972,
+      "max": [
+        0.9981069564819336,
+        0.9987828135490417,
+        0.999987781047821,
+        1.0
+      ],
+      "min": [
+        -0.9981070160865784,
+        -0.999805212020874,
+        -0.9986564517021179,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 13972,
+      "max": [
+        0.9982430338859558,
+        0.9980150461196899
+      ],
+      "min": [
+        0.003161497414112091,
+        0.001674584113061428
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 111776,
+      "componentType": 5126,
+      "count": 13972,
+      "max": [
+        0.9982430338859558,
+        0.9980150461196899
+      ],
+      "min": [
+        0.003161497414112091,
+        0.001674584113061428
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 223552,
+      "componentType": 5126,
+      "count": 13972,
+      "max": [
+        0.9982430338859558,
+        0.9980150461196899
+      ],
+      "min": [
+        0.003161497414112091,
+        0.001674584113061428
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 21774,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "MarisDani (https://sketchfab.com/MarisDani)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/flower-pot-lowpoly-7ad37a39f5534d57bfb68f34fe0fbd22",
+      "title": "Flower Pot LowPoly"
+    },
+    "generator": "Sketchfab-13.37.1",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 87096,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 335328,
+      "byteOffset": 87096,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 335328,
+      "byteOffset": 422424,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 223552,
+      "byteOffset": 757752,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 981304,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/Material_baseColor.png"
+    },
+    {
+      "uri": "textures/Material_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/Material_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "Material",
+      "normalTexture": {
+        "index": 2,
+        "scale": 0.7725737830820055
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "metallicRoughnessTexture": {
+          "index": 1
+        },
+        "roughnessFactor": 0.8274310931233314
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Ghiveci_Cylinder.003_Material_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3,
+            "TEXCOORD_1": 4,
+            "TEXCOORD_2": 5
+          },
+          "indices": 6,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "4a070e004e104484b595fef56baf5ed1.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9999999999999929,
+        1.1920928955078097e-07,
+        0.0,
+        0.0,
+        -1.1920928955078097e-07,
+        0.9999999999999929,
+        0.0,
+        0.0,
+        0.0,
+        1068.205078125,
+        1.0
+      ],
+      "name": "Ghiveci_Cylinder.003"
+    },
+    {
+      "mesh": 0,
+      "name": "Ghiveci_Cylinder.003_Material_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}
