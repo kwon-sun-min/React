@@ -31,6 +31,11 @@ const App = () => {
   const [isRotating, setIsRotating] = useState(false);
   const [isCurtainOpen, setIsCurtainOpen] = useState(true);
   const [isConnected, setIsConnected] = useState(false);
+  const [sensorData /*setSensorData*/] = useState({
+    temperature: 25.5,
+    humidity: 65,
+    lightLevel: 850,
+  });
 
   const handleRotation = () => {
     setIsRotating(!isRotating);
@@ -51,16 +56,39 @@ const App = () => {
     <Container>
       <Title>스마트팜 제어 시스템</Title>
 
-      <CanvasContainer>
-        <Canvas camera={{ position: [5, 5, 5], fov: 75 }}>
-          <ambientLight intensity={0.5} />
-          <pointLight position={[10, 10, 10]} intensity={1} />
-          <Pot isRotating={isRotating} />
-          <OrbitControls />
-        </Canvas>
+      <MainContent>
+        <CanvasContainer>
+          <Canvas camera={{ position: [5, 5, 5], fov: 75 }}>
+            <ambientLight intensity={1} />
+            <pointLight position={[10, 10, 10]} intensity={1} />
+            <Pot isRotating={isRotating} />
+            <OrbitControls />
+          </Canvas>
 
-        {!isCurtainOpen && <Curtain />}
-      </CanvasContainer>
+          {!isCurtainOpen && <Curtain />}
+        </CanvasContainer>
+
+        <SensorPanel>
+          <SensorTitle>환경 센서 모니터링</SensorTitle>
+          <SensorGrid>
+            <SensorCard>
+              <SensorIcon>🌡️</SensorIcon>
+              <SensorLabel>온도</SensorLabel>
+              <SensorValue>{sensorData.temperature}°C</SensorValue>
+            </SensorCard>
+            <SensorCard>
+              <SensorIcon>💧</SensorIcon>
+              <SensorLabel>습도</SensorLabel>
+              <SensorValue>{sensorData.humidity}%</SensorValue>
+            </SensorCard>
+            <SensorCard>
+              <SensorIcon>☀️</SensorIcon>
+              <SensorLabel>일조량</SensorLabel>
+              <SensorValue>{sensorData.lightLevel} lux</SensorValue>
+            </SensorCard>
+          </SensorGrid>
+        </SensorPanel>
+      </MainContent>
 
       <ControlPanel>
         <Button onClick={handleConnect}>
@@ -128,6 +156,62 @@ const Button = styled.button`
   &:hover {
     background-color: #45a049;
   }
+`;
+
+const MainContent = styled.div`
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+`;
+
+const SensorPanel = styled.div`
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+`;
+
+const SensorTitle = styled.h2`
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+`;
+
+const SensorGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 15px;
+`;
+
+const SensorCard = styled.div`
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+`;
+
+const SensorIcon = styled.div`
+  font-size: 2rem;
+  margin-bottom: 10px;
+`;
+
+const SensorLabel = styled.div`
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+`;
+
+const SensorValue = styled.div`
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: bold;
 `;
 
 export default App;
